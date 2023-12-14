@@ -1,5 +1,25 @@
 # wishlist-vue-v4
 
+## NPM Version 
+```
+9.6.7
+```
+
+## Node Version
+```
+18.17.0
+```
+
+## Pre Processing: 
+```
+SASS. Files in folder src/scss
+```
+
+## Run ESLint Fix
+```
+./node_modules/.bin/eslint --fix .
+```
+
 ## Project setup
 ```
 npm install
