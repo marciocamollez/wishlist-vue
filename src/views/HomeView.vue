@@ -1,17 +1,21 @@
 <template>
-  <div class="home">
-    <HeaderApp msg="Welcome to Your Vue.js App"/>
+  <div>
+    <HeaderApp />
+    <div class="container">
+      <BreadCrumb />
+    </div>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
 import HeaderApp from '@/components/HeaderApp.vue'
+import BreadCrumb from '@/components/BreadCrumb.vue'
 
 export default {
 	name: 'HomeView',
 	components: {
-		HeaderApp
+		HeaderApp,
+		BreadCrumb
 	}
 }
 </script>

@@ -10,9 +10,17 @@
 18.17.0
 ```
 
+## Technologies
+```
+VueJS 2.6.14
+VueRouter 3.5.1
+Vuex 3.6.2
+
+```
+
 ## Pre Processing: 
 ```
-SASS. Files in folder src/scss
+SASS 1.32.7. Files in folder src/scss
 ```
 
 ## Run ESLint Fix
@@ -23,12 +31,18 @@ SASS. Files in folder src/scss
 ## Components in Application: 
 ```
 HeaderApp - Header of the project
+    MenuSearch - Search input of the header
+    MenuLinks - Component with menu links of the header
+
+BreadCrumb - Dynamic Breadcrumb with Vue Router
+
 ```
 
 ## Views in Application: 
 ```
 HomeView - Index page of the project
 WishList - Page with all fav items of the project
+SupportPage - Page with telephones and email infos
 ```
 
 ## Project setup

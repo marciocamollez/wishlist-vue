@@ -1,1 +1,47 @@
+/* Colors */
 $purple: #5a2d82;
+
+/* Font Sizes */
+$regular: 16px;
+
+/* Font Family */
+$font: Arial, Helvetica, sans-serif;
+
+/* Global Styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: $regular;
+    font-family: $font;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 100%;
+}
+
+h1 {
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    color: $purple;
+}
+
+p {
+    margin-bottom: .5rem;
+    margin-top: 0;
+    font-size: 1.2rem;
+    color: #555;
+}
