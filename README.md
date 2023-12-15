@@ -20,6 +20,17 @@ SASS. Files in folder src/scss
 ./node_modules/.bin/eslint --fix .
 ```
 
+## Components in Application: 
+```
+HeaderApp - Header of the project
+```
+
+## Views in Application: 
+```
+HomeView - Index page of the project
+WishList - Page with all fav items of the project
+```
+
 ## Project setup
 ```
 npm install
