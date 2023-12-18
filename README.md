@@ -36,6 +36,12 @@ HeaderApp - Header of the project
 
 BreadCrumb - Dynamic Breadcrumb with Vue Router
 
+CardItem - Fetched list os items from external api
+
+```
+## API Route: 
+```
+located in src/api/Api.js
 ```
 
 ## Views in Application: 

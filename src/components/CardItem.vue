@@ -16,6 +16,8 @@
 </template>
 
 <script>
+import api from '@/apis/Api'
+
 export default {
 	data() {
 		return {
@@ -24,11 +26,9 @@ export default {
 		}
 	},
 	mounted() {
-		fetch('https://pokeapi.co/api/v2/pokemon?limit=20')
-			.then(response => response.json())
-			.then(data => {
-				this.pokemons = data.results
-			})
+		api.get().then(response => {
+			this.pokemons = response.data.results
+		})
 		this.likedPokemons = JSON.parse(localStorage.getItem('likedPokemons')) || []
 	},
 	methods: {
