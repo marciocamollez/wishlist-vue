@@ -41,6 +41,10 @@ export default {
   a {
     text-decoration: none;
 
+    &:hover{
+      color: #000;
+    }
+
     &:after{
       content: ' / ';
       margin-left: .5rem;

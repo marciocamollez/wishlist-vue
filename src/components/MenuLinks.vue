@@ -35,6 +35,10 @@ export default {
     a{
       color: #FFFFFF;
       text-decoration: none;
+
+      &:hover{
+        color: #fff200;
+      }
     }
 
     li{

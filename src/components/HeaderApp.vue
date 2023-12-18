@@ -64,6 +64,10 @@ header{
       a{
         color: #FFF;
         text-decoration: none;
+
+        &:hover{
+          color: #fff200;
+        }
       }
     }
 }
