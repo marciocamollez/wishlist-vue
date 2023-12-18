@@ -37,6 +37,7 @@ HeaderApp - Header of the project
 BreadCrumb - Dynamic Breadcrumb with Vue Router
 
 CardItem - Fetched list os items from external api
+CardFavourite - Favourite items who accepts remove it from list
 
 ```
 ## API Route: 
