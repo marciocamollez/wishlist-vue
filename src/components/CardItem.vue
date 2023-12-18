@@ -22,13 +22,16 @@ export default {
 	data() {
 		return {
 			pokemons: [],
-			likedPokemons: []
+			likedPokemons: [],
 		}
 	},
 	mounted() {
 		api.get().then(response => {
 			this.pokemons = response.data.results
 		})
+			.catch(function (error) {
+				console.error(error.message)
+			})
 		this.likedPokemons = JSON.parse(localStorage.getItem('likedPokemons')) || []
 	},
 	methods: {
