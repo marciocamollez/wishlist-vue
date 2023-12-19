@@ -1,5 +1,7 @@
 /* Colors */
 $purple: #5a2d82;
+$yellow: #fff200;
+$gray: #555;
 
 /* Font Sizes */
 $regular: 16px;
@@ -43,5 +45,5 @@ p {
     margin-bottom: .5rem;
     margin-top: 0;
     font-size: 1.2rem;
-    color: #555;
+    color: $gray;
 }

@@ -3,7 +3,12 @@
     <HeaderApp />
     <div class="container">
       <BreadCrumb />
-      <CardItem />
+        <div v-if="isSearchUsed">
+          <SearchResult />
+        </div>
+        <div v-else>
+          <CardItem />
+        </div>
     </div>
   </div>
 </template>
@@ -12,13 +17,20 @@
 import HeaderApp from '@/components/HeaderApp.vue'
 import BreadCrumb from '@/components/BreadCrumb.vue'
 import CardItem from '@/components/CardItem.vue'
+import SearchResult from '@/components/SearchResult.vue'
 
 export default {
 	name: 'HomeView',
+	computed: {
+		isSearchUsed() {
+			return this.$store.state.isSearchUsed
+		},
+	},
 	components: {
 		HeaderApp,
 		BreadCrumb,
-		CardItem
-	}
+		CardItem,
+		SearchResult
+	},
 }
 </script>

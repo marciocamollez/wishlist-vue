@@ -1,13 +1,32 @@
 <template>
   <div class="search">
-    <img src="../assets/search.svg" />
-    <input type="text" placeholder="Busca" />
+      <input type="text" placeholder="Digite o nome desejado e clique no botão ao lado" v-model="searchTerm" />
+      <button @click="search"><img src="../assets/search.svg" /></button>
   </div>
 </template>
 
 <script>
+import { mapMutations, mapActions } from 'vuex'
 export default {
 	name: 'MenuSearch',
+	data () {
+		return {
+			searchTerm: ''
+		}
+	},
+	methods: {
+		...mapMutations(['updateSearchTerm']),
+		...mapActions(['search']),
+		onSearchTermChange () {
+			this.updateSearchTerm(this.searchTerm)
+		},
+
+	},
+	watch: {
+		searchTerm () {
+			this.onSearchTermChange()
+		}
+	}
 }
 </script>
 
@@ -23,15 +42,26 @@ export default {
       position: absolute;
       z-index: 99;
       top: 15px;
-      left: 10px;
+      right: 15px;
     }
 
     input{
       display: flex;
       flex: 1;
       justify-content: flex-end;
-      padding: 1rem 1rem 1rem 3rem;
+      padding: 1rem;
       border: none;
+    }
+
+    button{
+      background: #ccc;
+      width: 50px;
+      border: none;
+
+      &:hover{
+        background-color: $yellow;
+        cursor: pointer;
+      }
     }
 }
 @media screen and (max-width: 350px){

@@ -37,7 +37,7 @@ export default {
       text-decoration: none;
 
       &:hover{
-        color: #fff200;
+        color: $yellow;
       }
     }
 
