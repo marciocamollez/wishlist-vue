@@ -10,17 +10,26 @@ const routes = [
 	{
 		path: '/',
 		name: '',
-		component: HomeView
+		component: HomeView,
+		meta: {
+			title: 'Home - Luiza Labs',
+		}
 	},
 	{
 		path: '/wishlist',
 		name: 'Wishlist',
 		component: WishList,
+		meta: {
+			title: 'Wishlist - Luiza Labs',
+		}
 	},
 	{
 		path: '/support',
 		name: 'Support',
 		component: SupportPage,
+		meta: {
+			title: 'About - Luiza Labs',
+		}
 	}
 ]
 
@@ -29,6 +38,11 @@ const router = new VueRouter({
 	// eslint-disable-next-line no-undef
 	base: process.env.BASE_URL,
 	routes
+})
+
+router.beforeEach((to, from, next) => {
+	document.title = `${to.meta.title}`
+	next()
 })
 
 export default router
