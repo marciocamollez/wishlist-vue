@@ -27,11 +27,17 @@ export default new Vuex.Store({
 	},
 	actions: {
 		async search ({ commit, state }) {
-			const response = await axios.get(`https://pokeapi.co/api/v2/pokemon/${state.searchTerm}`)
-			if(this.state.searchTerm){
-				commit('updateSearchResults', response.data)
-			}
-
+			await axios.get(`https://pokeapi.co/api/v2/pokemon/${state.searchTerm}`)
+				.then(response => {
+					if(this.state.searchTerm){
+						commit('updateSearchResults', response.data)
+					}
+				})
+				.catch(error => {
+					if (error.response) {
+						alert('Resultado não encontrado')
+					}
+				})
 		}
 	},
 	modules: {

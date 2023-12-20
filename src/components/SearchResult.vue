@@ -1,7 +1,10 @@
 <template>
   <div class="card">
-    <div class="card__item" v-for="pokemon in searchResults" :key="pokemon.id">
-      <p>{{ pokemon.name }}</p>
+    <h1>Resultados da Pesquisa:</h1>
+    <div class="card__item">
+      <div v-for="pokemon in searchResults" :key="pokemon.name">
+        <div><h2>{{ pokemon.name }} </h2></div>
+      </div>
     </div>
   </div>
 </template>
@@ -16,10 +19,11 @@ export default {
 }
 </script>
 
-
-
 <style scoped lang="scss">
 @import "../scss/global";
 
-
+h2{
+  text-transform: capitalize;
+  color: $purple;
+}
 </style>
