@@ -1,7 +1,9 @@
 <template>
-  <div class="search">
+  <div>
+    <form v-on:submit.prevent="checkForm" class="search">
       <input type="text" placeholder="Digite o nome desejado e clique no botão ao lado" v-model="searchTerm" />
       <button @click="search"><img src="../assets/search.svg" /></button>
+    </form>
   </div>
 </template>
 
@@ -11,10 +13,15 @@ export default {
 	name: 'MenuSearch',
 	data () {
 		return {
-			searchTerm: ''
+			searchTerm: '',
 		}
 	},
 	methods: {
+		checkForm: function() {
+			if(!this.searchTerm) {
+				alert('A busca deve ser preenchida')
+			}
+		},
 		...mapMutations(['updateSearchTerm']),
 		...mapActions(['search']),
 		onSearchTermChange () {

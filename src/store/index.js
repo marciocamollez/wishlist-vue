@@ -28,7 +28,10 @@ export default new Vuex.Store({
 	actions: {
 		async search ({ commit, state }) {
 			const response = await axios.get(`https://pokeapi.co/api/v2/pokemon/${state.searchTerm}`)
-			commit('updateSearchResults', response.data)
+			if(this.state.searchTerm){
+				commit('updateSearchResults', response.data)
+			}
+
 		}
 	},
 	modules: {
