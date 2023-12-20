@@ -7,9 +7,9 @@
           <SearchResult />
         </div>
         <div v-else>
-          <h1>Support Area</h1>
-          <p>Telephones: (11) 2123-2122</p>
-          <p>Email: test@maganets.com</p>
+          <h1>{{ $t('central_support') }}</h1>
+          <p>{{ $t('telephone') }}: (11) 4444-5555</p>
+          <p>{{ $t('email') }}: contact@email.com</p>
         </div>
     </div>
   </div>

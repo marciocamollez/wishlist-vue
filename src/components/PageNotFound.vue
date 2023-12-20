@@ -7,8 +7,8 @@
           <SearchResult />
         </div>
         <div v-else>
-          <h1>404 Page Not Found</h1>
-            <p><RouterLink to="/">Click to go back</RouterLink> </p>
+          <h1>{{ $t('not_found') }}</h1>
+            <p><RouterLink to="/">{{ $t('go_back') }}</RouterLink> </p>
         </div>
     </div>
   </div>

@@ -1,6 +1,6 @@
 <template>
   <div class="card">
-    <h1>Resultados da Pesquisa:</h1>
+    <h1>{{ $t('search_txt') }}</h1>
     <div class="card__item">
       <div v-for="pokemon in searchResults" :key="pokemon.name">
         <div><h2>{{ pokemon.name }} </h2></div>
