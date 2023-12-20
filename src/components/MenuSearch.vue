@@ -1,8 +1,14 @@
 <template>
   <div>
     <form v-on:submit.prevent="checkForm" class="search">
-      <input type="text" placeholder="Digite o nome desejado e clique no botão ao lado" v-model="searchTerm" />
-      <button @click="search"><img src="../assets/search.svg" /></button>
+      <label for="search-bar">Barra de busca:</label>
+      <input id="search-bar" type="text" placeholder="Digite o nome desejado e clique no botão ao lado" v-model="searchTerm" />
+      <button
+        @click="search"
+        data-message="Botão de pesquisa"
+      >
+        <img src="../assets/search.svg" alt="Botão para pesquisar" />
+      </button>
     </form>
   </div>
 </template>
@@ -44,6 +50,10 @@ export default {
     display: flex;
     justify-content: flex-end;
     position: relative;
+
+    label{
+      display: none;
+    }
 
     img{
       position: absolute;

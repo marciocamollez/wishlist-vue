@@ -1,13 +1,13 @@
 <template>
   <ul class="menu-links">
     <li>
-      <img src="../assets/pin.svg" /> {{ $t('city') }}
+      <img src="../assets/pin.svg" alt="Icone de localização" /> {{ $t('city') }}
     </li>
     <li>
-      <img src="../assets/phone.svg" /> <RouterLink to="/support"> {{ $t('central_support') }}</RouterLink>
+      <img src="../assets/phone.svg" alt="Icone de telefone" /> <RouterLink to="/support"> {{ $t('central_support') }}</RouterLink>
     </li>
     <li>
-      <img src="../assets/heart.svg" />
+      <img src="../assets/heart.svg" alt="Icone de lista de desejos" />
       <RouterLink to="/wishlist">{{ $t('wishlist') }}</RouterLink>
     </li>
   </ul>

@@ -1,4 +1,9 @@
-# wishlist-vue-v4
+# wishlist-vue-v2
+
+## Bilingual App: 
+```
+i18n located in src/main.js
+```
 
 ## NPM Version 
 ```
@@ -15,7 +20,7 @@
 VueJS 2.6.14
 VueRouter 3.5.1
 Vuex 3.6.2
-
+Vue-i18n 8.28.2
 ```
 
 ## Pre Processing: 
