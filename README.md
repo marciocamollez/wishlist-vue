@@ -50,6 +50,8 @@ SearchResult - Component who lists the name searched
 ## API Route: 
 ```
 located in src/api/Api.js
+
+URL - https://pokeapi.co/api/v2/pokemon?limit=20 (.env file)
 ```
 
 ## Views in Application: 
